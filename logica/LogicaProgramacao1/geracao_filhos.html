@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>")
+    };
+
+    function mostra(geraçao){
+        document.write("Desde 1500 até o ano de 2022 já se passaram "+geraçao+" gerações.")
+
+    };
+
+    var anoAtual = 2021;
+    var anoInicial = 1500;
+    var diferenca = anoAtual - anoInicial;
+    var media = 28;
+    var geraçao = Math.round(diferenca / media);
+
+    pulaLinha();
+    mostra(geraçao);
+
+
+</script>
