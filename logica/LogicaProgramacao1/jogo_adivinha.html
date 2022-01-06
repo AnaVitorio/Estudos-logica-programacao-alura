@@ -22,23 +22,38 @@
     
     var numeroPensado = sorteia(limite);
 
-    var chute = parseInt(prompt("Chute um número de 0 a "+limite+": "));
-
-
     mostra("<h1>Adivinhe o número!</h1>")
 
-    if(chute == numeroPensado){
-        mostra("Você acertou!");
-    } else{
+    var tentativas = 1;
+    while(tentativas <= 3){
 
-        mostra("Você errou!");
+        var chute = parseInt(prompt("Chute um número de 0 a "+limite+": "));
 
-        if(chute > numeroPensado){
-            mostra("O número sorteado é menor!");
-        }else{
-            mostra("O númeor sorteado é maior!");
-        }
+        if(chute == numeroPensado){
+
+            mostra("Você acertou!");
+            break;
+
+        } else{
+            
+            mostra("Você errou!");
+
+            if(chute > numeroPensado){
+
+                mostra("O número sorteado é menor!");
+
+            }else{
+
+                mostra("O númeor sorteado é maior!");
+
+            }
+
+            tentativas++;
+
         //mostra("O número pensado foi "+numeroPensado);
     } 
+
+    }
+    
    
 </script>

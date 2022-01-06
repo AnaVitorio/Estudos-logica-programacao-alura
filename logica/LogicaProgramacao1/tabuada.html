@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+        document.write(frase)
+        pulaLinha();
+    }
+
+    var multiplicador = 1;
+    var numero = parseInt(prompt("Qual número você quer saber a tabuada: "));
+
+    mostra("<h1>Tabuada</h1>");
+
+    //tabuada com a estrutura WHILE
+    while(multiplicador <= 10){
+
+        mostra(numero+" x "+multiplicador+" = "+numero*multiplicador);
+        multiplicador++;
+
+    }
+    
+    pulaLinha();
+
+    //tabuada com a estrutura FOR
+    for(var i = 1; i <= 10; i++){
+        mostra(numero+" x "+i+" = "+numero*i);
+        
+    }
+    
+    
+</script>
